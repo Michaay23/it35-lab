@@ -28,7 +28,7 @@ function Favorites() {
       <IonContent className="ion-padding" color="light">
         <IonAccordionGroup>
 
-          {/* 1. Encouragement */}
+          {/* Encouragement */}
           <IonAccordion value="verse1">
             <IonItem slot="header" color="primary">
               <IonLabel style={{ fontWeight: 'bold', fontSize: '18px' }}>
@@ -43,7 +43,7 @@ function Favorites() {
             </div>
           </IonAccordion>
 
-          {/* 2. Strength */}
+          {/* Strength */}
           <IonAccordion value="verse2">
             <IonItem slot="header" color="success">
               <IonLabel style={{ fontWeight: 'bold', fontSize: '18px' }}>
@@ -57,7 +57,7 @@ function Favorites() {
             </div>
           </IonAccordion>
 
-          {/* 3. Peace */}
+          {/* Peace */}
           <IonAccordion value="verse3">
             <IonItem slot="header" color="warning">
               <IonLabel style={{ fontWeight: 'bold', fontSize: '18px' }}>
@@ -72,7 +72,7 @@ function Favorites() {
             </div>
           </IonAccordion>
 
-          {/* 4. Guidance */}
+          {/* Guidance */}
           <IonAccordion value="verse4">
             <IonItem slot="header" color="medium">
               <IonLabel style={{ fontWeight: 'bold', fontSize: '18px' }}>
@@ -87,9 +87,9 @@ function Favorites() {
             </div>
           </IonAccordion>
 
-          {/* 5. Hope */}
+          {/* Hope */}
           <IonAccordion value="verse5">
-            <IonItem slot="header" color="success">
+            <IonItem slot="header" color="dark">
               <IonLabel style={{ fontWeight: 'bold', fontSize: '18px' }}>
                 Hope - Jeremiah 29:11
               </IonLabel>
@@ -102,7 +102,7 @@ function Favorites() {
             </div>
           </IonAccordion>
 
-          {/* 6. Love */}
+          {/* Love */}
           <IonAccordion value="verse6">
             <IonItem slot="header" color="danger">
               <IonLabel style={{ fontWeight: 'bold', fontSize: '18px' }}>
@@ -118,9 +118,9 @@ function Favorites() {
             </div>
           </IonAccordion>
 
-          {/* 7. Comfort */}
+          {/* Comfort */}
           <IonAccordion value="verse7">
-            <IonItem slot="header" color="warning">
+            <IonItem slot="header" color="tertiary">
               <IonLabel style={{ fontWeight: 'bold', fontSize: '18px' }}>
                 Comfort - Psalm 23:4
               </IonLabel>
@@ -133,9 +133,9 @@ function Favorites() {
             </div>
           </IonAccordion>
 
-          {/* 8. Faith */}
+          {/* Faith */}
           <IonAccordion value="verse8">
-            <IonItem slot="header" color="primary">
+            <IonItem slot="header" color="secondary">
               <IonLabel style={{ fontWeight: 'bold', fontSize: '18px' }}>
                 Faith - Hebrews 11:1
               </IonLabel>
@@ -147,83 +147,9 @@ function Favorites() {
             </div>
           </IonAccordion>
 
-          {/* 9. Forgiveness */}
+          {/* Trust */}
           <IonAccordion value="verse9">
-            <IonItem slot="header" color="medium">
-              <IonLabel style={{ fontWeight: 'bold', fontSize: '18px' }}>
-                Forgiveness - 1 John 1:9
-              </IonLabel>
-            </IonItem>
-            <div className="ion-padding" slot="content">
-              <p style={{ fontStyle: 'italic' }}>
-                “If we confess our sins, he is faithful and just and will forgive us our sins 
-                and purify us from all unrighteousness.”
-              </p>
-            </div>
-          </IonAccordion>
-
-          {/* 10. Wisdom */}
-          <IonAccordion value="verse10">
-            <IonItem slot="header" color="success">
-              <IonLabel style={{ fontWeight: 'bold', fontSize: '18px' }}>
-                Wisdom - James 1:5
-              </IonLabel>
-            </IonItem>
-            <div className="ion-padding" slot="content">
-              <p style={{ fontStyle: 'italic' }}>
-                “If any of you lacks wisdom, you should ask God, who gives generously to all 
-                without finding fault, and it will be given to you.”
-              </p>
-            </div>
-          </IonAccordion>
-
-          {/* 11. Protection */}
-          <IonAccordion value="verse11">
-            <IonItem slot="header" color="danger">
-              <IonLabel style={{ fontWeight: 'bold', fontSize: '18px' }}>
-                Protection - Psalm 91:4
-              </IonLabel>
-            </IonItem>
-            <div className="ion-padding" slot="content">
-              <p style={{ fontStyle: 'italic' }}>
-                “He will cover you with his feathers, and under his wings you will find refuge; 
-                his faithfulness will be your shield and rampart.”
-              </p>
-            </div>
-          </IonAccordion>
-
-          {/* 12. Courage */}
-          <IonAccordion value="verse12">
-            <IonItem slot="header" color="warning">
-              <IonLabel style={{ fontWeight: 'bold', fontSize: '18px' }}>
-                Courage - Deuteronomy 31:6
-              </IonLabel>
-            </IonItem>
-            <div className="ion-padding" slot="content">
-              <p style={{ fontStyle: 'italic' }}>
-                “Be strong and courageous. Do not be afraid or terrified because of them, 
-                for the Lord your God goes with you; he will never leave you nor forsake you.”
-              </p>
-            </div>
-          </IonAccordion>
-
-          {/* 13. Joy */}
-          <IonAccordion value="verse13">
-            <IonItem slot="header" color="tertiary">
-              <IonLabel style={{ fontWeight: 'bold', fontSize: '18px' }}>
-                Joy - Nehemiah 8:10
-              </IonLabel>
-            </IonItem>
-            <div className="ion-padding" slot="content">
-              <p style={{ fontStyle: 'italic' }}>
-                “Do not grieve, for the joy of the Lord is your strength.”
-              </p>
-            </div>
-          </IonAccordion>
-
-          {/* 14. Trust */}
-          <IonAccordion value="verse14">
-            <IonItem slot="header" color="primary">
+             <IonItem slot="header" color="success">
               <IonLabel style={{ fontWeight: 'bold', fontSize: '18px' }}>
                 Trust - Psalm 56:3
               </IonLabel>
@@ -235,22 +161,21 @@ function Favorites() {
             </div>
           </IonAccordion>
 
-          {/* 15. Salvation */}
-          <IonAccordion value="verse15">
-            <IonItem slot="header" color="medium">
+          {/* Joy */}
+          <IonAccordion value="verse10">
+            <IonItem slot="header" color="warning">
               <IonLabel style={{ fontWeight: 'bold', fontSize: '18px' }}>
-                Salvation - Romans 10:9
+                 Joy - Nehemiah 8:10
               </IonLabel>
             </IonItem>
             <div className="ion-padding" slot="content">
               <p style={{ fontStyle: 'italic' }}>
-                “If you declare with your mouth, ‘Jesus is Lord,’ and believe in your heart 
-                that God raised him from the dead, you will be saved.”
+                “Do not grieve, for the joy of the Lord is your strength.”
               </p>
             </div>
           </IonAccordion>
 
-        </IonAccordionGroup>
+         </IonAccordionGroup>
       </IonContent>
     </IonPage>
   );
