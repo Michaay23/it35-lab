@@ -30,33 +30,63 @@ const Favorites: React.FC = () => {
       img: "https://images.unsplash.com/photo-1577640256262-8488aa247e17?w=600&auto=format&fit=crop&q=60",
       content: "Consistency and kindness go a long way."
     }
-
-  ];
+  ]; 
 
   return (
     <IonPage>
       <IonHeader>
-        <IonToolbar>
+        <IonToolbar color="tertiary">
           <IonButtons slot='start'>
             <IonMenuButton />
           </IonButtons>
-          <IonTitle>Feed</IonTitle>
+          <IonTitle>Inspiration</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent fullscreen>
+      <IonContent fullscreen className="ion-padding" style={{ 
+        background: 'linear-gradient(to right, #fdfbfb, #ebedee)', 
+        minHeight: '100vh' 
+      }}>
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-          gap: '16px',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+          gap: '24px',
           padding: '16px'
         }}>
           {cards.map((card, index) => (
-            <IonCard key={index} style={{ boxShadow: '0 4px 8px rgba(0,0,0,0.1)', borderRadius: '10px' }}>
-              <img alt={card.title} src={card.img} style={{ width: '100%', borderTopLeftRadius: '10px', borderTopRightRadius: '10px' }}/>
+            <IonCard 
+              key={index}
+              style={{
+                borderRadius: '20px',
+                backdropFilter: 'blur(10px)',
+                background: 'rgba(255, 255, 255, 0.8)',
+                boxShadow: '0 10px 25px rgba(0, 0, 0, 0.1)',
+                transition: 'transform 0.3s ease',
+                overflow: 'hidden'
+              }}
+              onMouseEnter={e => (e.currentTarget.style.transform = 'scale(1.03)')}
+              onMouseLeave={e => (e.currentTarget.style.transform = 'scale(1)')}
+            >
+              <img 
+                alt={card.title} 
+                src={card.img} 
+                style={{ 
+                  width: '100%', 
+                  height: '180px', 
+                  objectFit: 'cover' 
+                }} 
+              />
               <IonCardHeader>
-                <IonCardTitle>{card.title}</IonCardTitle>
+                <IonCardTitle style={{
+                  fontSize: '1.2rem',
+                  fontWeight: 'bold',
+                  color: '#333'
+                }}>
+                  {card.title}
+                </IonCardTitle>
               </IonCardHeader>
-              <IonCardContent>{card.content}</IonCardContent>
+              <IonCardContent style={{ color: '#555', fontSize: '0.95rem' }}>
+                {card.content}
+              </IonCardContent>
             </IonCard>
           ))}
         </div>
