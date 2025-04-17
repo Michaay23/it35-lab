@@ -12,7 +12,7 @@ import {
   ItemReorderEventDetail,
 } from '@ionic/react';
  
-function Search() {
+function Favorites() {
   function handleReorder(event: CustomEvent<ItemReorderEventDetail>) {
     console.log('Dragged from index', event.detail.from, 'to', event.detail.to);
     event.detail.complete();
@@ -70,4 +70,4 @@ const labelStyle = {
   color: '#111827',
 };
 
-export default Search;
+export default Favorites;
