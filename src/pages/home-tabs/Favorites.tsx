@@ -1,73 +1,68 @@
 import React from 'react';
-import { 
-  IonItem,
-  IonLabel,
-  IonList,
-  IonReorder,
-  IonReorderGroup,
+import {
+  IonButtons,
   IonCard,
   IonCardContent,
   IonCardHeader,
   IonCardTitle,
-  ItemReorderEventDetail,
+  IonContent,
+  IonHeader,
+  IonMenuButton,
+  IonPage,
+  IonTitle,
+  IonToolbar
 } from '@ionic/react';
- 
-function Favorites() {
-  function handleReorder(event: CustomEvent<ItemReorderEventDetail>) {
-    console.log('Dragged from index', event.detail.from, 'to', event.detail.to);
-    event.detail.complete();
-  }
+
+const Favorites: React.FC = () => {
+  const cards = [
+    {
+      title: "Remember why you started",
+      img: "https://images.unsplash.com/photo-1564410267841-915d8e4d71ea?w=600&auto=format&fit=crop&q=60",
+      content: "Stay motivated and focused on your goals."
+    },
+    {
+      title: "If you never know failure, you will never know success",
+      img: "https://images.unsplash.com/photo-1605514449459-5a9cfa0b9955?w=600&auto=format&fit=crop&q=60",
+      content: "Embrace challenges as learning experiences."
+    },
+    {
+      title: "Wake Up, Kick Ass, Be Kind, Repeat",
+      img: "https://images.unsplash.com/photo-1577640256262-8488aa247e17?w=600&auto=format&fit=crop&q=60",
+      content: "Consistency and kindness go a long way."
+    }
+
+  ];
 
   return (
-    <div className="p-4 max-w-3xl mx-auto">
-        
-        <IonReorderGroup disabled={false} onIonItemReorder={handleReorder}>
-          {[
-            'Networking & Communication',
-            'Data Storage & Management',
-            'Cybersecurity Fundamentals',
-            'Software Development',
-            'Cloud Computing & Services',
-          ].map((topic, index) => (
-            <IonItem key={index} style={itemStyle}>
-              <IonLabel style={labelStyle}>{topic}</IonLabel>
-              <IonReorder slot="end" />
-            </IonItem>
+    <IonPage>
+      <IonHeader>
+        <IonToolbar>
+          <IonButtons slot='start'>
+            <IonMenuButton />
+          </IonButtons>
+          <IonTitle>Feed</IonTitle>
+        </IonToolbar>
+      </IonHeader>
+      <IonContent fullscreen>
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+          gap: '16px',
+          padding: '16px'
+        }}>
+          {cards.map((card, index) => (
+            <IonCard key={index} style={{ boxShadow: '0 4px 8px rgba(0,0,0,0.1)', borderRadius: '10px' }}>
+              <img alt={card.title} src={card.img} style={{ width: '100%', borderTopLeftRadius: '10px', borderTopRightRadius: '10px' }}/>
+              <IonCardHeader>
+                <IonCardTitle>{card.title}</IonCardTitle>
+              </IonCardHeader>
+              <IonCardContent>{card.content}</IonCardContent>
+            </IonCard>
           ))}
-        </IonReorderGroup>
-        
-    </div>
+        </div>
+      </IonContent>
+    </IonPage>
   );
-}
-
-// 🎨 Styles
-const definitionStyle = {
-  backgroundColor: '#e0f2fe',
-  borderLeft: '5px solid #3b82f6',
-  marginBottom: '20px',
-};
-
-const titleStyle = {
-  fontSize: '1.4rem',
-  color: '#1e3a8a',
-  fontWeight: 'bold',
-};
-
-const contentStyle = {
-  fontSize: '1rem',
-  color: '#374151',
-};
-
-const itemStyle = {
-  padding: '12px 16px',
-  backgroundColor: '#ffffff',
-  borderBottom: '1px solid #e5e7eb',
-};
-
-const labelStyle = {
-  fontSize: '1rem',
-  fontWeight: 500,
-  color: '#111827',
 };
 
 export default Favorites;
