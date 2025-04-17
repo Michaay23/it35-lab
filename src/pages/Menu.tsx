@@ -1,5 +1,4 @@
-
-import { 
+import {  
     IonAlert,
     IonButton,
     IonButtons,
@@ -117,4 +116,4 @@ import EditProfilePage from './EditProfilePage';
     );
   };
   
-  export default Menu;
+  export default Menu; 

@@ -1,5 +1,4 @@
-
-import { 
+import {  
   IonAlert,
   IonAvatar,
   IonButton,
@@ -126,4 +125,4 @@ const Login: React.FC = () => {
   );
 };
 
-export default Login;
+export default Login; 
