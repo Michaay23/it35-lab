@@ -41,7 +41,7 @@ return (
                 <IonLabel>{item.name}</IonLabel>
               </IonTabButton>
             ))}
-            
+             
           </IonTabBar>
         <IonRouterOutlet>
           <Route exact path="/it35-lab/app/home/feed" render={Feed} />

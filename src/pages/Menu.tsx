@@ -22,7 +22,7 @@ import { Redirect, Route } from 'react-router';
 import Home from './Home';
 import About from './About';
 import Details from './Details';
-import { supabase } from '../../utils/supabaseClient';
+import { supabase } from '../utils/supabaseClient';
 import { useState } from 'react';
 import EditProfilePage from './EditProfilePage';
 
@@ -38,6 +38,7 @@ import EditProfilePage from './EditProfilePage';
         {name:'About', url: '/it35-lab/app/about', icon: rocketOutline},
         {name:'Profile', url: '/it35-lab/app/profile', icon: settingsOutline},
     ]
+    
     const handleLogout = async () => {
         const { error } = await supabase.auth.signOut();
         if (!error) {
